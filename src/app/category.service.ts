@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Category } from './category.model';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { Post } from './post.model';
 
 @Injectable()
 export class CategoryService {
   categories: FirebaseListObservable<any[]>;
+  posts: FirebaseListObservable<any[]>;
 
   constructor(private database: AngularFireDatabase){
     this.categories = database.list('categories');
@@ -32,8 +34,13 @@ export class CategoryService {
     categoryEntryInFirebase.remove();
   }
 
+  grabPosts(categoryId:string){
+    this.posts = this.database.list('categories/'+categoryId+'/post/');
+    return this.posts;
+  }
+
   addNewPost(newPost){
-    
+    // this.grabPosts(categoryId);
   }
 
 }

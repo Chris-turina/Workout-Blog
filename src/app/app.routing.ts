@@ -26,7 +26,7 @@ const appRoutes: Routes = [
     component: CategoryDetailComponent
   },
   {
-    path:'categories/:id/new-post',
+    path:'categories/:id/newpost',
     component: PostComponent
   },
 ];

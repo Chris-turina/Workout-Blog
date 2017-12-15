@@ -32,7 +32,7 @@ export class CategoryDetailComponent implements OnInit {
   }
 
   showPostDetails(post){
-    this.router.navigate(['categories', this.categoryId, 'post',post.$key]);
+    this.router.navigate(['categories', this.categoryId, 'newpost',post.$key]);
   }
 
 }

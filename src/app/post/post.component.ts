@@ -6,7 +6,8 @@ import { CategoryService } from '../category.service';
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
-  styleUrls: ['./post.component.scss']
+  styleUrls: ['./post.component.scss'],
+  providers: [CategoryService]
 })
 export class PostComponent implements OnInit {
   public categoryId: string;
@@ -19,8 +20,8 @@ export class PostComponent implements OnInit {
   }
 
   submitPostForm(title: string) {
-    var newPost = new Post(title, this.categoryId)
-    this.categoryService.addNewPost(newPost, this.categoryId);
+    var newPost = new Post(title)
+    this.categoryService.addNewPost(newPost);
   }
 
   goToCategoryDetails(){
