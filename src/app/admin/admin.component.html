@@ -10,5 +10,5 @@
     <br>
     <input #newDescription>
   </div>
-  <button (click)="submitNewCategory(newName.value, newDescription.value)"></button>
+  <button (click)="submitNewCategory(newName.value, newDescription.value); newName.value='', newDescription.value=''">Add</button>
 </div>

@@ -13,4 +13,8 @@ export class CategoryService {
   getCategories(){
     return this.categories;
   }
+
+  addCategory(newCategory: Category){
+    this.categories.push(newCategory);
+  }
 }
