@@ -19,7 +19,12 @@ export class CategoryService {
   }
 
   getCategoryById(categoryId: string){
-    // console.log(this.database.object('category/' + categoryId));
     return this.database.object('categories/' + categoryId);
+  }
+
+  updateCategory(localUpdatedCategory){
+    var categoryEntryInFirebase = this.getCategoryById(localUpdatedCategory.$key);
+    categoryEntryInFirebase.update({name: localUpdatedCategory.name,
+                                    description: localUpdatedCategory.description})
   }
 }
