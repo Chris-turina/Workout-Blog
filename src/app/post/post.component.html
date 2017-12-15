@@ -1,3 +1,8 @@
-<p>
-  post works!
-</p>
+<div>
+  <div>
+    <label>New Post Title:</label>
+    <br>
+    <input #newTitle>
+  </div>
+  <button (click)="submitPostForm(newTitle.value); newTitle.value=''; goToCategoryDetails()">Add New Post</button>
+</div>

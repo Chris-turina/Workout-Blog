@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute, Params, Router } from '@angular/router'
+import { Post } from '../post.model';
+import { CategoryService } from '../category.service';
 
 @Component({
   selector: 'app-post',
@@ -6,10 +9,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./post.component.scss']
 })
 export class PostComponent implements OnInit {
-
-  constructor() { }
+  public categoryId: string;
+  constructor(private route: ActivatedRoute, private router: Router, private categoryService: CategoryService) { }
 
   ngOnInit() {
+    this.route.params.forEach((urlParameters) => {
+      this.categoryId = urlParameters['id']
+    })
+  }
+
+  submitPostForm(title: string) {
+    var newPost = new Post(title, this.categoryId)
+    this.categoryService.addNewPost(newPost, this.categoryId);
+  }
+
+  goToCategoryDetails(){
+    this.router.navigate(['categories/' + this.categoryId]);
   }
 
 }

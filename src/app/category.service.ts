@@ -32,4 +32,8 @@ export class CategoryService {
     categoryEntryInFirebase.remove();
   }
 
+  addNewPost(newPost){
+    
+  }
+
 }

@@ -1,7 +1,8 @@
 <div>
   <h3>{{(categoryToDisplay | async)?.name}}</h3>
   <h4>{{(categoryToDisplay | async)?.description}}</h4>
+  <button routerLink="new-post">Add New Post</button>
   <div *ngFor="let post of (postsArr | async)">
-    <p>{{post.name}}</p>
+    <p (click)="showPostDetails">{{post.name}}</p>
   </div>
 </div>

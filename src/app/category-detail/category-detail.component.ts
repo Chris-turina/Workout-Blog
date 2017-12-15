@@ -4,6 +4,8 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { CategoryService } from '../category.service';
 import { FirebaseListObservable } from 'angularfire2/database';
+import { Router } from '@angular/router'
+import { Post } from '../post.model'
 
 @Component({
   selector: 'app-category-detail',
@@ -17,7 +19,8 @@ export class CategoryDetailComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
               private location: Location,
-              private categoryService: CategoryService
+              private categoryService: CategoryService,
+              private router: Router,
   ) {}
 
   ngOnInit() {
@@ -29,7 +32,7 @@ export class CategoryDetailComponent implements OnInit {
   }
 
   showPostDetails(post){
-    
+    this.router.navigate(['categories', this.categoryId, 'post',post.$key]);
   }
 
 }

@@ -5,6 +5,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { AdminComponent } from './admin/admin.component';
 import { CategoryDetailComponent} from './category-detail/category-detail.component';
+import { PostComponent } from './post/post.component';
+import { PostDetailsComponent } from './post-details/post-details.component';
 
 const appRoutes: Routes = [
   {
@@ -12,16 +14,20 @@ const appRoutes: Routes = [
     component: WelcomeComponent
   },
   {
-    path:'categories',
-    component: CategoriesComponent
-  },
-  {
     path:'admin',
     component: AdminComponent
   },
   {
+    path:'categories',
+    component: CategoriesComponent
+  },
+  {
     path: 'categories/:id',
     component: CategoryDetailComponent
+  },
+  {
+    path:'categories/:id/new-post',
+    component: PostComponent
   },
 ];
 
