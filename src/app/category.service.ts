@@ -26,4 +26,10 @@ export class CategoryService {
     var categoryEntryInFirebase = this.getCategoryById(localUpdatedCategory.$key);
     categoryEntryInFirebase.update({name: localUpdatedCategory.name, description: localUpdatedCategory.description})
   }
+
+  deleteCategory(categoryToDelete){
+    var categoryEntryInFirebase = this.getCategoryById(categoryToDelete.$key);
+    categoryEntryInFirebase.remove();
+  }
+
 }

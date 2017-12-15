@@ -17,4 +17,10 @@ export class EditCategoryComponent implements OnInit {
     this.categoryService.updateCategory(categoryToUpdate);
   }
 
+  beginDeletingCategory(categoryToDelete){
+    if(confirm("Are you sure you want to delete this item from the inventory?")){
+      this.categoryService.deleteCategory(categoryToDelete);
+    }
+  }
+
 }
