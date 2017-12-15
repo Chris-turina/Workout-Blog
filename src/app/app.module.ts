@@ -11,6 +11,8 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { AdminComponent } from './admin/admin.component';
+import { CategoryDetailComponent } from './category-detail/category-detail.component';
+
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -24,7 +26,8 @@ export const firebaseConfig = {
     AppComponent,
     WelcomeComponent,
     CategoriesComponent,
-    AdminComponent
+    AdminComponent,
+    CategoryDetailComponent,
   ],
   imports: [
     BrowserModule,

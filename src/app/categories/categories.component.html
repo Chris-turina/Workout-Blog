@@ -1,6 +1,9 @@
 <h2>Categories</h2>
 
-<div *ngFor="let category of categories | async">
+<div *ngFor="let category of categories | async" (click)="goToDetailPage(category)">
   <h3>{{category.name}}</h3>
+  <div>
+    <p>{{category.description}}</p>
+  </div>
 
 </div>

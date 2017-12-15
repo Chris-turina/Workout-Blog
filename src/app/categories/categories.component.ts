@@ -13,10 +13,16 @@ import { Category } from '../category.model';
 })
 export class CategoriesComponent implements OnInit {
   categories: FirebaseListObservable<any[]>;
-  
-  constructor() { }
+  currentRoute: string = this.router.url;
+
+  constructor(private router: Router, private categoryService: CategoryService) { }
 
   ngOnInit() {
+    this.categories = this.categoryService.getCategories();
+  }
+
+  goToCategoryPage(clickedCategory){
+    this.router.navigate(['category', clickedCategory.$key])
   }
 
 }

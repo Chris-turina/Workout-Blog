@@ -17,4 +17,8 @@ export class CategoryService {
   addCategory(newCategory: Category){
     this.categories.push(newCategory);
   }
+
+  getCategoryById(categoryId: string){
+    return this.database.object('category' + categoryId);
+  }
 }
