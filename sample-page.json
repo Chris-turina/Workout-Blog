@@ -1,8 +1,12 @@
 {"categories": [{
   "name": "Running",
+  "description":"I hate running"
   }, {
   "name": "Lifting",
+  "description":"I hate lifting"
   }, {
   "name": "calisthenics",
+  "description":"I hate this"
+
   }]
 }
