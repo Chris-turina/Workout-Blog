@@ -24,7 +24,6 @@ export class CategoryService {
 
   updateCategory(localUpdatedCategory){
     var categoryEntryInFirebase = this.getCategoryById(localUpdatedCategory.$key);
-    categoryEntryInFirebase.update({name: localUpdatedCategory.name,
-                                    description: localUpdatedCategory.description})
+    categoryEntryInFirebase.update({name: localUpdatedCategory.name, description: localUpdatedCategory.description})
   }
 }
