@@ -10,6 +10,7 @@ import { masterFirebaseConfig } from './api-keys';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { AdminComponent } from './admin/admin.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -22,7 +23,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     WelcomeComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

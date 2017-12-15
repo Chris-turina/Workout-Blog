@@ -1,0 +1,14 @@
+<h3>Add a new Category</h3>
+<div>
+  <div>
+    <label>Category Title:</label>
+    <br>
+    <input #newName>
+  </div>
+  <div>
+    <label>Description:</label>
+    <br>
+    <input #newDescription>
+  </div>
+  <button (click)="submitNewCategory(newName.value, newDescription.value)"></button>
+</div>
