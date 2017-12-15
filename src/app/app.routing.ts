@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { AdminComponent } from './admin/admin.component';
+import { CategoryDetailComponent} from './category-detail/category-detail.component';
 
 const appRoutes: Routes = [
   {
@@ -17,6 +18,10 @@ const appRoutes: Routes = [
   {
     path:'admin',
     component: AdminComponent
+  },
+  {
+    path: 'categories/:id',
+    component: CategoryDetailComponent
   },
 ];
 

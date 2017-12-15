@@ -24,6 +24,7 @@ export class CategoryDetailComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
       this.categoryId = urlParameters['id'];
     });
+    console.log(this.categoryToDisplay);
     this.categoryToDisplay = this.categoryService.getCategoryById(this.categoryId);
   }
 

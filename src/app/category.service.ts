@@ -19,6 +19,7 @@ export class CategoryService {
   }
 
   getCategoryById(categoryId: string){
-    return this.database.object('category' + categoryId);
+    console.log(this.database.object('category/' + categoryId));
+    return this.database.object('category/' + categoryId);
   }
 }

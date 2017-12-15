@@ -1,9 +1,14 @@
 <h2>Categories</h2>
 
-<div *ngFor="let category of categories | async" (click)="goToDetailPage(category)">
-  <h3>{{category.name}}</h3>
-  <div>
-    <p>{{category.description}}</p>
+<div *ngFor="let category of categories | async">
+  <div (click)="goToDetailPage(category)">
+    <h3>{{category.name}}</h3>
+    <div *ngIf="currentRoute === '/admin'">
+      <p>{{category.description}}</p>
+      <hr>
+      <!-- <app-edit-category[selectedCategory]="category"></app-edit-category> -->
+    </div>
+
   </div>
 
 </div>
