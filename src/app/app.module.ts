@@ -6,11 +6,13 @@ import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,
