@@ -16,8 +16,8 @@ export class AdminComponent implements OnInit {
   ngOnInit() {
   }
 
-  submitNewCategory(name: string, description: string) {
-    var newCategory: Category = new Category(name, description);
+  submitNewCategory(name: string, description: string, posts: any[]) {
+    var newCategory: Category = new Category(name, description, posts);
     this.categoryService.addCategory(newCategory)
   }
 

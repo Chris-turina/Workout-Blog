@@ -28,4 +28,8 @@ export class CategoryDetailComponent implements OnInit {
     this.categoryToDisplay = this.categoryService.getCategoryById(this.categoryId);
   }
 
+  showPostDetails(post){
+    
+  }
+
 }
