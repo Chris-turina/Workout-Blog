@@ -39,8 +39,10 @@ export class CategoryService {
     return this.posts;
   }
 
-  addNewPost(newPost){
-    // this.grabPosts(categoryId);
+  addNewPost(newPost: Post, categoryId: string){
+    console.log(newPost)
+    this.grabPosts(categoryId);
+    this.posts.push(newPost)
   }
 
 }

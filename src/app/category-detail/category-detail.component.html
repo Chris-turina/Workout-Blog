@@ -3,6 +3,6 @@
   <h4>{{(categoryToDisplay | async)?.description}}</h4>
   <button routerLink="newpost">Add New Post</button>
   <div *ngFor="let post of (postsArr | async)">
-    <p (click)="showPostDetails">{{post.name}}</p>
+    <p>{{post.title}}</p>
   </div>
 </div>

@@ -20,8 +20,8 @@ export class PostComponent implements OnInit {
   }
 
   submitPostForm(title: string) {
-    var newPost = new Post(title)
-    this.categoryService.addNewPost(newPost);
+    var newPost = new Post(title,)
+    this.categoryService.addNewPost(newPost, this.categoryId);
   }
 
   goToCategoryDetails(){

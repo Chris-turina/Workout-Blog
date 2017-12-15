@@ -16,6 +16,7 @@ import { Post } from '../post.model'
 export class CategoryDetailComponent implements OnInit {
   categoryId: string;
   categoryToDisplay;
+  postsArr;
 
   constructor(private route: ActivatedRoute,
               private location: Location,
@@ -27,12 +28,8 @@ export class CategoryDetailComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
       this.categoryId = urlParameters['id'];
     });
-    console.log(this.categoryToDisplay);
     this.categoryToDisplay = this.categoryService.getCategoryById(this.categoryId);
-  }
-
-  showPostDetails(post){
-    this.router.navigate(['categories', this.categoryId, 'newpost',post.$key]);
+    this.postsArr = this.categoryService.grabPosts(this.categoryId);
   }
 
 }
