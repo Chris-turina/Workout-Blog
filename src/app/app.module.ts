@@ -12,6 +12,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { AdminComponent } from './admin/admin.component';
 import { CategoryDetailComponent } from './category-detail/category-detail.component';
+import { EditCategoryComponent } from './edit-category/edit-category.component';
 
 
 export const firebaseConfig = {
@@ -28,6 +29,7 @@ export const firebaseConfig = {
     CategoriesComponent,
     AdminComponent,
     CategoryDetailComponent,
+    EditCategoryComponent,
   ],
   imports: [
     BrowserModule,
