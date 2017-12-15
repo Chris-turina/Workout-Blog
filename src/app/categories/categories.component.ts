@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./categories.component.scss']
 })
 export class CategoriesComponent implements OnInit {
-  categories: FirebaseListObservable<any[]>;
+  // categories: FirebaseListObservable<any[]>;
   constructor() { }
 
   ngOnInit() {
