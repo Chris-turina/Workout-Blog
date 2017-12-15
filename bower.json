@@ -1,0 +1,17 @@
+{
+  "name": "angular-extended",
+  "description": "",
+  "main": "",
+  "authors": [
+    "chris turina <chris.turina@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

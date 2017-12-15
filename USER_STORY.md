@@ -7,4 +7,8 @@ As a user I would:
 As an Admin I would like too:
 -be able to edit peoples posts
 -be able to add a new posts
--
+
+
+
+Wish List:
+-Have Categories
