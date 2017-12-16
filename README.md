@@ -1,28 +1,37 @@
-# AngularExtended
+# _WorkOut Blog_
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+#### _This Application allows the user to post a workout in a specific category, 12/15/2017_
 
-## Development server
+#### By _**Chris Turina**_
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Description
 
-## Code scaffolding
+_This app is a public blog site where other people can look at workouts other people have posted.  The user is directed to the welcome page and then selects categories and can click on a couple of different categories to see what workouts other people have posted.  There is an admin section that lets the administrator create categories and also delete categories.  This application is using firebase so everything that is added or deleted is in the administrators firebase account._
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+## Setup/Installation Requirements
 
-## Build
+*_ The user must have angular cli installed, atom text editor, and access to the internet.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+*_ The user first needs to create a firebase account by googling firebase and login with there google account.  Then they press the get started button on the page.  Next add a project.  Then click the 'add firebase to your web app'.  Take all that information and hold onto it because we will be using it soon.
 
-## Running unit tests
+*_ In the console go to the desktop and git clone the this repo
+*_ Create an api-keys.ts in the app folder
+*_ take the information from before and put it in the api-keys folder, then add the folder to the gitignore file so no one can take your information.
+*_ in the console type: npm install
+*_ then type: ng serve
+*_open the browser window and paste the url the console gave you (its usually https:localhost:4200)
+*_ Enjoy the application
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Known Bugs
 
-## Running end-to-end tests
+_The project is ongoing, there are a few known bugs, you can not delete any new posts, and anyone can access the admin tab._
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+## Support and contact details
 
-## Further help
+_Any questions or comments my email is chris.turina@gmail.com_
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Technologies Used
+
+_atom text editor, angular cli, firebase, node, sass, _
+
+Copyright (c) 2017 **_Chris Turina_**
